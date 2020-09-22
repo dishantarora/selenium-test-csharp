@@ -1,56 +1,42 @@
 ﻿using OpenQA.Selenium;
+using SeleniumTests.SeleniumEasy.Common;
 
 namespace SeleniumTests.SeleniumEasy.PageObjects
 {
     sealed class SimpleFormDemo
     {
         private IWebDriver Driver { get; set; }
+        private IXpathReader XpathReader { get; set; }
 
         private IWebElement EnterMessageInputField => Driver.FindElement(
-            By.XPath(@"//form[@id='get-input']//label[contains(text(),'Enter message')]//following-sibling::input"));
+            By.XPath(XpathReader.GetValue<Models.SimpleFormDemo>().EnterMessageInputField));
         private IWebElement ShowMessageButtom => Driver.FindElement(
-            By.XPath(@"//form[@id='get-input']//button"));
+            By.XPath(XpathReader.GetValue<Models.SimpleFormDemo>().ShowMessageButtom));
         private IWebElement YourMessage => Driver.FindElement(
-            By.XPath(@"//div[@id='user-message']//span[@id='display']"));
+            By.XPath(XpathReader.GetValue<Models.SimpleFormDemo>().ShowMessageButtom));
         private IWebElement EnterAInputField => Driver.FindElement(
-            By.XPath(@"//form[@id='gettotal']//input[@id='sum1']"));
+            By.XPath(XpathReader.GetValue<Models.SimpleFormDemo>().ShowMessageButtom));
         private IWebElement EnterBInputField => Driver.FindElement(
-            By.XPath(@"//form[@id='gettotal']//input[@id='sum2']"));
+            By.XPath(XpathReader.GetValue<Models.SimpleFormDemo>().ShowMessageButtom));
         private IWebElement GetTotalButtom => Driver.FindElement(
-            By.XPath(@"//form[@id='gettotal']//button[contains(text(),'Get Total')]"));
+            By.XPath(XpathReader.GetValue<Models.SimpleFormDemo>().ShowMessageButtom));
         private IWebElement Total => Driver.FindElement(
-            By.XPath(@"//form[@id='gettotal']//following-sibling::div//span[@id='displayvalue']"));
-        public SimpleFormDemo(IWebDriver driver)
+            By.XPath(XpathReader.GetValue<Models.SimpleFormDemo>().ShowMessageButtom));
+
+        public SimpleFormDemo(
+            IWebDriver driver,
+            IXpathReader xpathReader)
         {
             Driver = driver;
+            XpathReader = xpathReader;
         }
-        public void EnterMessage(string text)
-        {
-            EnterMessageInputField.SendKeys(text);
-        }
-        public void SubmitMessage()
-        {
-            ShowMessageButtom.Click();
-        }
-        public string GetMessage()
-        {
-            return YourMessage.Text;
-        }
-        public void EnterValueA(string a)
-        {
-            EnterAInputField.SendKeys(a);
-        }
-        public void EnterValueB(string b)
-        {
-            EnterBInputField.SendKeys(b);
-        }
-        public void SubmitGetTotalButton()
-        {
-            GetTotalButtom.Click();
-        }
-        public string GetTotal()
-        {
-            return Total.Text;
-        }
+
+        public void EnterMessage(string text) => EnterMessageInputField.SendKeys(text);
+        public void SubmitMessage() => ShowMessageButtom.Click();
+        public string GetMessage() => YourMessage.Text;
+        public void EnterValueA(string a) => EnterAInputField.SendKeys(a);
+        public void EnterValueB(string b) => EnterBInputField.SendKeys(b);
+        public void SubmitGetTotalButton() => GetTotalButtom.Click();
+        public string GetTotal() => Total.Text;
     }
 }
