@@ -35,6 +35,9 @@
     <WarningLevel>4</WarningLevel>
   </PropertyGroup>
   <ItemGroup>
+    <Reference Include="Newtonsoft.Json, Version=12.0.0.0, Culture=neutral, PublicKeyToken=30ad4fe6b2a6aeed, processorArchitecture=MSIL">
+      <HintPath>..\packages\Newtonsoft.Json.12.0.3\lib\net45\Newtonsoft.Json.dll</HintPath>
+    </Reference>
     <Reference Include="nunit.framework, Version=3.12.0.0, Culture=neutral, PublicKeyToken=2638cd05610744eb, processorArchitecture=MSIL">
       <HintPath>..\packages\NUnit.3.12.0\lib\net45\nunit.framework.dll</HintPath>
     </Reference>
@@ -50,16 +53,49 @@
     <Reference Include="WebDriver, Version=3.141.0.0, Culture=neutral, processorArchitecture=MSIL">
       <HintPath>..\packages\Selenium.WebDriver.3.141.0\lib\net45\WebDriver.dll</HintPath>
     </Reference>
+    <Reference Include="WebDriver.Support, Version=3.141.0.0, Culture=neutral, processorArchitecture=MSIL">
+      <HintPath>..\packages\Selenium.Support.3.141.0\lib\net45\WebDriver.Support.dll</HintPath>
+    </Reference>
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="Common\IXpathReader.cs" />
+    <Compile Include="Common\XpathReader.cs" />
+    <Compile Include="Models\AjaxFormSubmit.cs" />
+    <Compile Include="Models\CheckboxDemo.cs" />
+    <Compile Include="Models\HomePage.cs" />
+    <Compile Include="Models\InputFormSubmit.cs" />
+    <Compile Include="Models\JQuerySelectDropdown.cs" />
+    <Compile Include="Models\RadioButtonsDemo.cs" />
+    <Compile Include="Models\SelectDropdownList.cs" />
+    <Compile Include="Models\SimpleFormDemo.cs" />
+    <Compile Include="PageObjects\AjaxFormSubmit.cs" />
+    <Compile Include="PageObjects\CheckboxDemo.cs" />
     <Compile Include="PageObjects\HomePage.cs" />
+    <Compile Include="PageObjects\InputFormSubmit.cs" />
+    <Compile Include="PageObjects\JQuerySelectDropdown.cs" />
+    <Compile Include="PageObjects\RadioButtonsDemo.cs" />
+    <Compile Include="PageObjects\SelectDropdownList.cs" />
     <Compile Include="PageObjects\SimpleFormDemo.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
-    <Compile Include="Tests\SimpleFormDemo.cs" />
+    <Compile Include="Tests\AjaxForm.cs" />
+    <Compile Include="Tests\Checkbox.cs" />
+    <Compile Include="Tests\DropdownList.cs" />
+    <Compile Include="Tests\InputForm.cs" />
+    <Compile Include="Tests\JQueryDropdown.cs" />
+    <Compile Include="Tests\RadioButtons.cs" />
+    <Compile Include="Tests\SimpleForm.cs" />
   </ItemGroup>
   <ItemGroup>
     <None Include="packages.config" />
+    <None Include="Xpaths\AjaxFormSubmit.json" />
+    <None Include="Xpaths\CheckboxDemo.json" />
+    <None Include="Xpaths\HomePage.json" />
+    <None Include="Xpaths\InputFormSubmit.json" />
+    <None Include="Xpaths\RadioButtonsDemo.json" />
+    <None Include="Xpaths\SelectDropdownList.json" />
+    <None Include="Xpaths\SimpleFormDemo.json" />
   </ItemGroup>
+  <ItemGroup />
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <Target Name="EnsureNuGetPackageBuildImports" BeforeTargets="PrepareForBuild">
     <PropertyGroup>
