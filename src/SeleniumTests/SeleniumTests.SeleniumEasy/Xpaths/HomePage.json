@@ -1,0 +1,12 @@
+{
+  "Lightbox": "//div[@id='at-cv-lightbox",
+  "LightBoxCloseIcon": "//a[@id='at-cv-lightbox-close']",
+  "InputFormsTab": "//div[@id='navbar-brand-centered']//ul//li//a[contains(text(),'Input Forms')]",
+  "SimpleFormDemo": "//div[@id='navbar-brand-centered']//ul//li//a[contains(text(),'Input Forms')]//following-sibling::ul//li//a[contains(text(),'Simple Form Demo')]",
+  "CheckboxDemo": "//div[@id='navbar-brand-centered']//ul//li//a[contains(text(),'Input Forms')]//following-sibling::ul//li//a[contains(text(),'Checkbox Demo')]",
+  "RadioButtonsDemo": "//div[@id='navbar-brand-centered']//ul//li//a[contains(text(),'Input Forms')]//following-sibling::ul//li//a[contains(text(),'Radio Buttons Demo')]",
+  "DropdownList": "//div[@id='navbar-brand-centered']//ul//li//a[contains(text(),'Input Forms')]//following-sibling::ul//li//a[contains(text(),'Select Dropdown List')]",
+  "InputFormSubmit": "//div[@id='navbar-brand-centered']//ul//li//a[contains(text(),'Input Forms')]//following-sibling::ul//li//a[contains(text(),'Input Form Submit')]",
+  "AjaxFormSubmit": "//div[@id='navbar-brand-centered']//ul//li//a[contains(text(),'Input Forms')]//following-sibling::ul//li//a[contains(text(),'Ajax Form Submit')]",
+  "JQuerySelectDropdown": "//div[@id='navbar-brand-centered']//ul//li//a[contains(text(),'Input Forms')]//following-sibling::ul//li//a[contains(text(),'JQuery Select Dropdown')]"
+}
