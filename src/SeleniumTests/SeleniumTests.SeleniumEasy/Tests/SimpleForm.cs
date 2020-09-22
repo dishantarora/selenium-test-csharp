@@ -1,6 +1,7 @@
 ﻿using NUnit.Framework;
 using OpenQA.Selenium;
 using OpenQA.Selenium.Firefox;
+using SeleniumTests.SeleniumEasy.Common;
 using SeleniumTests.SeleniumEasy.PageObjects;
 using System;
 
@@ -28,10 +29,10 @@ namespace SeleniumTests.SeleniumEasy.Tests
         [Test]
         public void EnsureSingleInputFieldWorks()
         {
-            HomePage homepage = new HomePage(Driver);
+            var homepage = new HomePage(Driver);
             homepage.GoToInputFormsTabOnNavigationBar();
             homepage.SelectSimpleFormDemoItemFromDropDownList();
-            SimpleFormDemo simpleFormDemoPage = new SimpleFormDemo(Driver);
+            var simpleFormDemoPage = new SimpleFormDemo(Driver, new XpathReader(""));
             simpleFormDemoPage.EnterMessage("sample message");
             simpleFormDemoPage.SubmitMessage();
             var message = simpleFormDemoPage.GetMessage();
@@ -40,10 +41,10 @@ namespace SeleniumTests.SeleniumEasy.Tests
         [Test]
         public void EnsureTwoInputFieldWorks()
         {
-            HomePage homepage = new HomePage(Driver);
+            var homepage = new HomePage(Driver);
             homepage.GoToInputFormsTabOnNavigationBar();
             homepage.SelectSimpleFormDemoItemFromDropDownList();
-            SimpleFormDemo simpleFormDemoPage = new SimpleFormDemo(Driver);
+            var simpleFormDemoPage = new SimpleFormDemo(Driver, new XpathReader(""));
             simpleFormDemoPage.EnterValueA("10");
             simpleFormDemoPage.EnterValueB("20");
             simpleFormDemoPage.SubmitGetTotalButton();

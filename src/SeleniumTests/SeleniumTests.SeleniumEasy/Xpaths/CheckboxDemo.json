@@ -1,0 +1,6 @@
+{
+  "SingleCheckbox": "//input[@id='isAgeSelected']",
+  "SuccessMessage": "//div[@id='txtAge']",
+  "Options": "//div[contains(text(),'Multiple Checkbox Demo')]//following-sibling::div//div[@class='checkbox']",
+  "CheckAllButton": "//input[@value='Check All']"
+}

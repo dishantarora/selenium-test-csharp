@@ -1,0 +1,9 @@
+{
+  "EnterMessageInputField": "//form[@id='get-input']//label[contains(text(),'Enter message')]//following-sibling::input",
+  "ShowMessageButtom": "//form[@id='get-input']//button",
+  "YourMessage": "//div[@id='user-message']//span[@id='display']",
+  "EnterAInputField": "//form[@id='gettotal']//input[@id='sum1']",
+  "EnterBInputField": "//form[@id='gettotal']//input[@id='sum2']",
+  "GetTotalButtom": "//form[@id='gettotal']//button[contains(text(),'Get Total')]",
+  "Total": "//form[@id='gettotal']//following-sibling::div//span[@id='displayvalue']"
+}
