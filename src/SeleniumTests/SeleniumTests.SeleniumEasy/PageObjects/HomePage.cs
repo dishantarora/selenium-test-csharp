@@ -1,35 +1,37 @@
 ﻿using OpenQA.Selenium;
+using SeleniumTests.SeleniumEasy.Common;
 
 namespace SeleniumTests.SeleniumEasy.PageObjects
 {
     sealed class HomePage
     {
-        #region Web Driver
         private IWebDriver Driver { get; set; }
-        #endregion
+        private IXpathReader XpathReader { get; set; }
 
         #region Lightbox
-        private IWebElement Lightbox => Driver.FindElement(By.XPath(@"//div[@id='at-cv-lightbox']"));
-        private IWebElement LightBoxCloseIcon => Driver.FindElement(By.XPath(@"//a[@id='at-cv-lightbox-close']"));
+        private IWebElement Lightbox => Driver.FindElement(
+            By.XPath(XpathReader.GetValue<Models.HomePage>().LightBox));
+        private IWebElement LightBoxCloseIcon => Driver.FindElement(
+            By.XPath(XpathReader.GetValue<Models.HomePage>().LightBoxCloseIcon));
         #endregion
 
         #region Input Forms
         private IWebElement InputFormsTab => Driver.FindElement(
-            By.XPath(@"//div[@id='navbar-brand-centered']//ul//li//a[contains(text(),'Input Forms')]"));
+            By.XPath(XpathReader.GetValue<Models.HomePage>().InputFormsTab));
         private IWebElement SimpleFormDemo => Driver.FindElement(
-            By.XPath(@"//div[@id='navbar-brand-centered']//ul//li//a[contains(text(),'Input Forms')]//following-sibling::ul//li//a[contains(text(),'Simple Form Demo')]"));
+            By.XPath(XpathReader.GetValue<Models.HomePage>().SimpleFormDemo));
         private IWebElement CheckboxDemo => Driver.FindElement(
-            By.XPath(@"//div[@id='navbar-brand-centered']//ul//li//a[contains(text(),'Input Forms')]//following-sibling::ul//li//a[contains(text(),'Checkbox Demo')]"));
+            By.XPath(XpathReader.GetValue<Models.HomePage>().CheckboxDemo));
         private IWebElement RadioButtonsDemo => Driver.FindElement(
-            By.XPath(@"//div[@id='navbar-brand-centered']//ul//li//a[contains(text(),'Input Forms')]//following-sibling::ul//li//a[contains(text(),'Radio Buttons Demo')]"));
+            By.XPath(XpathReader.GetValue<Models.HomePage>().RadioButtonsDemo));
         private IWebElement DropdownList => Driver.FindElement(
-            By.XPath(@"//div[@id='navbar-brand-centered']//ul//li//a[contains(text(),'Input Forms')]//following-sibling::ul//li//a[contains(text(),'Select Dropdown List')]"));
+            By.XPath(XpathReader.GetValue<Models.HomePage>().DropdownList));
         private IWebElement InputFormSubmit => Driver.FindElement(
-            By.XPath(@"//div[@id='navbar-brand-centered']//ul//li//a[contains(text(),'Input Forms')]//following-sibling::ul//li//a[contains(text(),'Input Form Submit')]"));
+            By.XPath(XpathReader.GetValue<Models.HomePage>().InputFormSubmit));
         private IWebElement AjaxFormSubmit => Driver.FindElement(
-            By.XPath(@"//div[@id='navbar-brand-centered']//ul//li//a[contains(text(),'Input Forms')]//following-sibling::ul//li//a[contains(text(),'Ajax Form Submit')]"));
+            By.XPath(XpathReader.GetValue<Models.HomePage>().AjaxFormSubmit));
         private IWebElement JQuerySelectDropdown => Driver.FindElement(
-            By.XPath(@"//div[@id='navbar-brand-centered']//ul//li//a[contains(text(),'Input Forms')]//following-sibling::ul//li//a[contains(text(),'JQuery Select Dropdown')]"));
+            By.XPath(XpathReader.GetValue<Models.HomePage>().JQuerySelectDropdown));
 
         #endregion
 
@@ -41,37 +43,13 @@ namespace SeleniumTests.SeleniumEasy.PageObjects
                 LightBoxCloseIcon.Click();
             }
         }
-        public void GoToInputFormsTabOnNavigationBar()
-        {
-            InputFormsTab.Click();
-        }
-        public void SelectSimpleFormDemoItemFromDropDownList()
-        {
-            SimpleFormDemo.Click();
-        }
-        public void SelectCheckboxDemoItemFromDropDownList()
-        {
-            CheckboxDemo.Click();
-        }
-        public void SelectRadioButtonsDemoItemFromDropDownList()
-        {
-            RadioButtonsDemo.Click();
-        }
-        public void SelectDropdownListItemFromDropDownList()
-        {
-            DropdownList.Click();
-        }
-        public void SelectInputFormSubmitItemFromDropDownList()
-        {
-            InputFormSubmit.Click();
-        }
-        public void SelectAjaxFormSubmitItemFromDropDownList()
-        {
-            AjaxFormSubmit.Click();
-        }
-        public void SelectJQuerySelectDropdownItemFromDropDownList()
-        {
-            JQuerySelectDropdown.Click();
-        }
+        public void GoToInputFormsTabOnNavigationBar() => InputFormsTab.Click();
+        public void SelectSimpleFormDemoItemFromDropDownList() => SimpleFormDemo.Click();
+        public void SelectCheckboxDemoItemFromDropDownList() => CheckboxDemo.Click();
+        public void SelectRadioButtonsDemoItemFromDropDownList() => RadioButtonsDemo.Click();
+        public void SelectDropdownListItemFromDropDownList() => DropdownList.Click();
+        public void SelectInputFormSubmitItemFromDropDownList() => InputFormSubmit.Click();
+        public void SelectAjaxFormSubmitItemFromDropDownList() => AjaxFormSubmit.Click();
+        public void SelectJQuerySelectDropdownItemFromDropDownList() => JQuerySelectDropdown.Click();
     }
 }
