@@ -4,9 +4,9 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace SeleniumTests.SeleniumEasy.Tests
+namespace WebAutomationSeleniumTests.SeleniumEasy.Tests
 {
-    class AjaxForm
+    class Checkbox
     {
     }
 }

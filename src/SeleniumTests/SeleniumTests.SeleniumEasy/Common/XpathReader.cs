@@ -1,7 +1,7 @@
 ﻿using Newtonsoft.Json;
 using System.IO;
 
-namespace SeleniumTests.SeleniumEasy.Common
+namespace WebAutomationSeleniumTests.SeleniumEasy.Common
 {
     sealed class XpathReader : IXpathReader
     {

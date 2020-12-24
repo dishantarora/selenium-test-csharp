@@ -4,9 +4,9 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace SeleniumTests.SeleniumEasy.PageObjects
+namespace WebAutomationSeleniumTests.SeleniumEasy.Tests
 {
-    class JQuerySelectDropdown
+    class JQueryDropdown
     {
     }
 }
