@@ -1,8 +1,8 @@
 ﻿using OpenQA.Selenium;
-using SeleniumTests.SeleniumEasy.Common;
+using WebAutomationSeleniumTests.SeleniumEasy.Common;
 using System.Collections.ObjectModel;
 
-namespace SeleniumTests.SeleniumEasy.PageObjects
+namespace WebAutomationSeleniumTests.SeleniumEasy.PageObjects
 {
     sealed class CheckboxDemo
     {

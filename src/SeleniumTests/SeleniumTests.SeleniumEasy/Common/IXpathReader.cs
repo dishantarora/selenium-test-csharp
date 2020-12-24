@@ -1,4 +1,4 @@
-﻿namespace SeleniumTests.SeleniumEasy.Common
+﻿namespace WebAutomationSeleniumTests.SeleniumEasy.Common
 {
     interface IXpathReader
     {

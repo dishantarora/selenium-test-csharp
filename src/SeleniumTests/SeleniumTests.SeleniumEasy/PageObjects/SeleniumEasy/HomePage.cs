@@ -1,7 +1,7 @@
 ﻿using OpenQA.Selenium;
-using SeleniumTests.SeleniumEasy.Common;
+using WebAutomationSeleniumTests.SeleniumEasy.Common;
 
-namespace SeleniumTests.SeleniumEasy.PageObjects
+namespace WebAutomationSeleniumTests.SeleniumEasy.PageObjects
 {
     sealed class HomePage
     {

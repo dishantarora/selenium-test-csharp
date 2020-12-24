@@ -1,8 +1,8 @@
 ﻿using OpenQA.Selenium;
 using OpenQA.Selenium.Support.UI;
-using SeleniumTests.SeleniumEasy.Common;
+using WebAutomationSeleniumTests.SeleniumEasy.Common;
 
-namespace SeleniumTests.SeleniumEasy.PageObjects
+namespace WebAutomationSeleniumTests.SeleniumEasy.PageObjects
 {
     sealed class InputFormSubmit
     {

@@ -1,11 +1,11 @@
 ﻿using NUnit.Framework;
 using OpenQA.Selenium;
 using OpenQA.Selenium.Firefox;
-using SeleniumTests.SeleniumEasy.Common;
-using SeleniumTests.SeleniumEasy.PageObjects;
+using WebAutomationSeleniumTests.SeleniumEasy.Common;
+using WebAutomationSeleniumTests.SeleniumEasy.PageObjects;
 using System;
 
-namespace SeleniumTests.SeleniumEasy.Tests
+namespace WebAutomationSeleniumTests.SeleniumEasy.Tests
 {
     [TestFixture]
     public class SimpleFromDemo

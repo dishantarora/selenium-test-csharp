@@ -1,4 +1,4 @@
-﻿namespace SeleniumTests.SeleniumEasy.Models
+﻿namespace WebAutomationSeleniumTests.SeleniumEasy.Models
 {
     sealed class HomePage
     {
